@@ -4,6 +4,7 @@
 ?>
 
 <?php
+global $post;
 $args = array(
 'post_type'=> 'post',
 'orderby'    => 'ID',
@@ -16,6 +17,7 @@ if ( $result-> have_posts() ) : ?>
 <?php while ( $result->have_posts() ) : $result->the_post(); ?>
 <h1><?php the_title(); ?></h1>   
 <?php the_content(); ?>
+<?php get_the_post_thumbnail($post->ID);?>
 <?php endwhile; ?>
 <?php endif; wp_reset_postdata(); ?>
 

@@ -1,4 +1,5 @@
 <?php
+     add_theme_support('post-thumbnailsgit ad');
     function enqueue_style_script() {
         $ver = '1.0.0';
 
