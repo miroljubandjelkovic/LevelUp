@@ -18,6 +18,7 @@ if ( $result-> have_posts() ) : ?>
 <h1><?php the_title(); ?></h1>   
 <?php the_content(); ?>
 <?php get_the_post_thumbnail($post->ID);?>
+<img src="<?php echo wp_attachment_image_src(get_the_post_thumbnail($post->ID));?>">
 <?php endwhile; ?>
 <?php endif; wp_reset_postdata(); ?>
 
